@@ -5,19 +5,24 @@ import java.awt.event.ActionListener;
 
 public class Bingo extends JFrame implements ActionListener {
 
+    /**
+     * Set the following configuration variables
+     */
+
+    final String ABSOLUTE_PATH_TO_DIR_IMG = "C:\\Users\\Usuario\\Desktop\\bingo\\bingo\\img";
+    final String IMAGE_NAME = "numerosBingo.jpg";
+
+    // Icono
+    final String IMAGE_PATH = ABSOLUTE_PATH_TO_DIR_IMG + "\\" + IMAGE_NAME;
+    ImageIcon icon = new ImageIcon(IMAGE_PATH);
+    JLabel iconLabel = new JLabel(icon);
+
     JPanel jpanel = (JPanel) this.getContentPane();
     JTextField bingoNumbers = new JTextField();
     JLabel numbersLabel = new JLabel();
     JButton button = new JButton("Vai bola");
     JLabel bingoFinishedLabel = new JLabel();
     int extractions = 1;
-
-    // Icono
-    final String ABSOLUTE_PATH_TO_DIR_IMG = "C:\\Users\\Usuario\\Desktop\\bingo\\bingo\\img";
-    final String IMAGE_NAME = "numerosBingo.jpg";
-    final String IMAGE_PATH = ABSOLUTE_PATH_TO_DIR_IMG + "\\" + IMAGE_NAME;
-    ImageIcon icon = new ImageIcon(IMAGE_PATH);
-    JLabel iconLabel = new JLabel(icon);
 
     public Bingo(){
         setSize(900,900);
