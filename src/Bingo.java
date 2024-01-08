@@ -22,7 +22,9 @@ public class Bingo extends JFrame implements ActionListener {
     JLabel numbersLabel = new JLabel();
     JButton button = new JButton("Vai bola");
     JLabel bingoFinishedLabel = new JLabel();
+    JLabel[] imagesBallsArray = new JLabel[20];
     int extractions = 1;
+    int ballImageXPosition = 25;
 
     public Bingo(){
         setSize(900,900);
